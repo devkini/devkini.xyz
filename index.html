@@ -3,7 +3,7 @@ layout: default
 ---
 
 <div class="posts">
-  {% for post in site.posts limit:1 %}
+  {% for post in site.posts %}
       {% if post.featured == true %}
     <article class="post">
       <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
@@ -37,7 +37,7 @@ layout: default
 </div>
         
         <div id="middle">
-  {% for post in site.posts limit:3 offset:4 %}
+  {% for post in site.posts limit:5 offset:4 %}
       {% if post.featured != true %}
     <article class="post">
       <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
@@ -55,8 +55,8 @@ layout: default
 
         <div id="sidebar">
             <div class="side-info">
-            Get latest updates from us by joining our <a href="https://telegram.me/devkini">Telegram Channel</a> - <a href="https://telegram.me/devkini">telegram.me/devkini</a> or follow our <a href="https://twitter.com/devkini">Twitter</a>.
+            Ikuti perkembangan terkini melalui twitter kami <a href="https://twitter.com/koditi">@koditi</a>.
             </div>
             <br />
-            <a class="twitter-timeline" data-tweet-limit="3" href="https://twitter.com/devkini">Tweets by devkini</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+            <a class="twitter-timeline" data-tweet-limit="3" href="https://twitter.com/koditi">Tweets oleh koditi</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
         </div>

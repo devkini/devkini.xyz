@@ -280,3 +280,27 @@ header, #content, #middle, #sidebar {
     background-color: #fff;
     padding: 4px;
 }
+
+#main-nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #d9edf7;
+}
+
+#main-nav li {
+    float: left;
+}
+
+#main-nav li a {
+    display: block;
+    color: #000;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+#main-nav li a:hover {
+    background-color: #FF8C00;
+}
