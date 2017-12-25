@@ -1,3 +1,15 @@
+/* Center image via hashtag at end of img src */
+img[src*='#center'] {
+    display: block;
+    margin: auto;
+}
+/* Add image caption */
+.image-caption {
+  text-align: center;
+  font-size: .8rem;
+  color: light-grey;
+}
+
 .panel {
   padding: 10px 15px;
   color: #31708f;

@@ -3,13 +3,13 @@
 #
 
 # Name of your site (displayed in the header)
-name: "#devkini"
+name: "#koditi"
 
 # Short bio or description (displayed in the header)
-description: Group of software developers in Malaysia
+description: Sumber maklumat utama software developer
 
 # URL of your avatar or profile pic (you could use your GitHub profile pic)
-avatar: http://i.imgur.com/wxhzSUi.jpg
+avatar: /images/koditi.png
 
 #
 # Flags below are optional
@@ -19,30 +19,30 @@ avatar: http://i.imgur.com/wxhzSUi.jpg
 footer-links:
   dribbble:
   email:
-  facebook:
+  facebook: koditi
   flickr:
-  github: devkini
+  github: koditi
   instagram:
   linkedin:
   pinterest:
   rss: # just type anything here for a working RSS icon, make sure you set the "url" above!
-  twitter: devkini
+  twitter: koditi
   stackoverflow: # your stackoverflow profile, e.g. "users/50476/bart-kiers"
   youtube: # channel/<your_long_string> or user/<user-name>
   googleplus: # anything in your profile username that comes after plus.google.com/
-  telegram: devkini
+  telegram:
 
 
 # Enter your Disqus shortname (not your username) to enable commenting on posts
 # You can find your shortname on the Settings page of your Disqus account
-disqus: devkini
+disqus: koditi
 
 # Enter your Google Analytics web tracking code (e.g. UA-2110908-2) to activate tracking
 google_analytics:
 
 # Your website URL (e.g. http://barryclark.github.io or http://www.barryclark.co)
 # Used for Sitemap.xml and your RSS feed
-url:
+url: https://koditi.my/
 
 # If you're hosting your site at a Project repository on GitHub pages
 # (http://yourusername.github.io/repository-name)

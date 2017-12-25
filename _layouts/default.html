@@ -9,45 +9,85 @@
       <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
+
+
     <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
-    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/custom.css" />
+
+    <script src="/js/jquery.min.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="/js/bootstrap.min.js"></script>
+
     <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
 
     <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
+
   </head>
 
   <body>
-    <div class="wrapper-masthead">
-        <div class="container {% unless page.url == '/' %}container-post{% endunless %}">
-        <header class="masthead clearfix">
-          <a href="{{ site.baseurl }}/" class="site-avatar"><img src="{{ site.avatar }}" /></a>
 
-          <div class="site-info">
-            <h1 class="site-name"><a href="{{ site.baseurl }}/">{{ site.name }}</a></h1>
-            <p class="site-description">{{ site.description }}</p>
+  <div class="container {% unless page.url == '/' %}container-post{% endunless %}">
+
+    <div class="header clearfix">
+      <div class="pull-right">
+        <div class="row">
+          <ul class="nav nav-pills">
+            <li role="presentation"><a href="{{ site.baseurl }}/info/">Siapa kami ?</a></li>
+            <li role="presentation"><a href="{{ site.baseurl }}/arkib/">Arkib</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="pull-left">
+        <div class="row">
+          <div class="col-md-3">
+            <a href="{{ site.baseurl }}/" class="site-avatar"><img src="{{ site.avatar }}" /></a>
           </div>
-
-          <nav>
-            <a href="{{ site.baseurl }}/about">About</a>
-            <a href="{{ site.baseurl }}/archives/">Archives</a>
-          </nav>
-        </header>
+          <div class="col-md-9">
+           <h1 class="site-name"><a href="{{ site.baseurl }}/">{{ site.name }}</a></h1>
+           <p class="site-description">{{ site.description }}</p>
+          </div>
+        </div>
       </div>
     </div>
 
-    <div id="main" role="main" class="container {% unless page.url == '/' %}container-post{% endunless %}">
-      {{ content }}
-    </div>
+    <nav class="navbar navbar-default main-navbar visible-md  visible-lg">
+      <ul class="nav navbar-nav">
+        <li><a href="{{ site.baseurl }}/">Home</a></li>
+        <li><a href="{{ site.baseurl }}/php/">PHP</a></li>
+        <li><a href="{{ site.baseurl }}/python/">Python</a></li>
+        <li><a href="{{ site.baseurl }}/javascript/">JavaScript</a></li>
+        <li><a href="{{ site.baseurl }}/html/">HTML</a></li>
+        <li><a href="{{ site.baseurl }}/css/">CSS</a></li>
+        <li><a href="{{ site.baseurl }}/git/">GIT</a></li>
+      </ul>
+    </nav>
 
-    <div class="wrapper-footer">
-      <div class="container">
-        <footer class="footer">
-          {% include svg-icons.html %}
-        </footer>
-      </div>
-    </div>
+    <hr class="menu-content-split">
+    {{ content }}
 
-    {% include analytics.html %}
-    {% include gitter-sidecar.html %}
+  </div>
+
+
+  
+  <nav class="navbar navbar-default main-navbar visible-xs visible-sm">
+    <ul class="nav navbar-nav">
+      <li><a href="{{ site.baseurl }}/">Home</a></li>
+      <li><a href="{{ site.baseurl }}/php/">PHP</a></li>
+      <li><a href="{{ site.baseurl }}/python/">Python</a></li>
+      <li><a href="{{ site.baseurl }}/javascript/">JavaScript</a></li>
+      <li><a href="{{ site.baseurl }}/html/">HTML</a></li>
+      <li><a href="{{ site.baseurl }}/css/">CSS</a></li>
+      <li><a href="{{ site.baseurl }}/git/">GIT</a></li>
+    </ul>
+  </nav>
+
+  <footer class="footer">
+    <div>
+      <p class="text-muted">{% include svg-icons.html %}</p>
+    </div>
+  </footer>
+
+  {% include analytics.html %}
+  {% include gitter-sidecar.html %}
   </body>
 </html>

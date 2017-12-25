@@ -2,61 +2,62 @@
 layout: default
 ---
 
-<div class="posts">
-  {% for post in site.posts limit:1 %}
-      {% if post.featured == true %}
+<div class="jumbotron">
+    {% for post in site.posts %}
+    {% if post.featured == true %}
     <article class="post">
-      <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
-      <span class="tags">Tagged as: {{ post | tags }}</span><br />
+        <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
+        <span class="tags">Tagged as: {{ post | tags }}</span><br/>
 
-      <div class="entry">
-        {{ post.excerpt }}
-      </div>
-
-      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
-    </article>
-    {% endif %}
-  {% endfor %}
-</div>
-
-<div id="content">
-  {% for post in site.posts limit:4 %}
-      {% if post.featured != true %}
-    <article class="post">
-      <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
-      <span class="tags">Tagged as: {{ post | tags }}</span><br />
-
-      <div class="entry">
-        {{ post.excerpt | truncate: 140 }}
-      </div>
-
-      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
-    </article>
-    {% endif %}
-  {% endfor %}
-</div>
-        
-        <div id="middle">
-  {% for post in site.posts limit:3 offset:4 %}
-      {% if post.featured != true %}
-    <article class="post">
-      <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
-      <span class="tags">Tagged as: {{ post | tags }}</span><br />
-
-      <div class="entry">
-        {{ post.excerpt | truncate: 140 }}
-      </div>
-
-      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
-    </article>
-    {% endif %}
-  {% endfor %}
+        <div class="entry">
+            {{ post.excerpt }}
         </div>
 
-        <div id="sidebar">
-            <div class="side-info">
-            Get latest updates from us by joining our <a href="https://telegram.me/devkini">Telegram Channel</a> - <a href="https://telegram.me/devkini">telegram.me/devkini</a> or follow our <a href="https://twitter.com/devkini">Twitter</a>.
+        <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
+    </article>
+    {% endif %}
+    {% endfor %}
+</div>
+
+
+    <div class="col-md-4 left-block">
+        {% for post in site.posts limit:4 %}
+        {% if post.featured != true %}
+        <article class="post">
+            <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
+            <div class="tags">Tagged as: {{ post | tags }}</div>
+
+            <div class="entry">
+                {{ post.excerpt | truncate: 140 }}
             </div>
-            <br />
-            <a class="twitter-timeline" data-tweet-limit="3" href="https://twitter.com/devkini">Tweets by devkini</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+            <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
+        </article>
+        {% endif %}
+        {% endfor %}
+    </div>
+    <div class="col-md-4 center-block">
+        {% for post in site.posts limit:5 offset:4 %}
+        {% if post.featured != true %}
+        <article class="post">
+            <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
+            <span class="tags">Tagged as: {{ post | tags }}</span><br/>
+
+            <div class="entry">
+                {{ post.excerpt | truncate: 140 }}
+            </div>
+
+            <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
+        </article>
+        {% endif %}
+        {% endfor %}
+    </div>
+    <div class="col-md-4 side-bar-right">
+        <div class="well side-info">
+            Ikuti perkembangan terkini melalui twitter kami <a href="https://twitter.com/koditi">@koditi</a>.
         </div>
+        <br/>
+        <a class="twitter-timeline" data-tweet-limit="3" href="https://twitter.com/koditi">Tweets oleh koditi</a>
+        <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+    </div>
+
